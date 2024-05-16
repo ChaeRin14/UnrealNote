@@ -1,0 +1,45 @@
+* Boolean
+- Branch(/IF/Condition)
+조건을 설정하는 노드
+branch shortcut : b 누르고 eventgraph 빈 곳 클릭
+
+- equal(==)
+- equal 검색 시 : (==)으로 검색
+
+  1. 대입연산자 / 비교연산자
+  - 헷갈리기 쉬움
+  - (==): 비교연산자 |      L - Value와  R - Value이 같은가?
+  - (=) : 대입연산자  |      L - Value에 R - Value을 넣겠다.
+
+- 반복문
+노드 이름 : For Loop
+for _ 한정된 범위 , [필요요소 : 초기값 , 조건, 증감] 
+        작업 순서 : 초기값 → 조건 → To do → 증감
+
+- For Loop
+단순히 반복 횟수만 정할 경우
+
+- For Each Loop
+배열 변수를 순회할 경우
+
+- BeginPlay 
+1번호출, 최초호출
+태어날 때 일어나야 하는 일
+
+- Tick
+Frame 이라고 하기도 한다
+fps : frame per second
+
+- EndPlay
+1번 호출, 최종호출
+적이나 내가 죽을 때 일어나야 하는 이벤트
+
+- 변수 생성
+VARIABLES > Components > 변수 명 > 타입
+
+- GetActorLocation
+현재 액터의 위치
+
+
+
+
