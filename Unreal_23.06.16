@@ -1,0 +1,39 @@
+- GameMode
+게임의 규칙을 정하는 것
+ GameMode 는 게임에 단 하나 존재한다
+만약 멀티 플레이를 한다면 서버만이 game mode를 가진다
+Master Client 개념이라고 볼 수도 있다
+게임모드는 레벨마다 하나씩
+
+- Default Game Mode 설정
+아웃라이너에 보인다는 것은 얘는 기본적으로 Actor라는 것
+GameMode가 먼저 로드되어 player가 로드된다
+그 전에 Game Instance가 로드된다
+순서가 중요한 것은 초기 설정을 그 부분에서 해줄 수 있기 때문
+
+- 전처리
+#으로 시작
+컴파일러가 처리하기 전에 처리한다
+define - 치환해주는 역활
+typedef - 타입을 만듦
+
+- 함수 호출된 위치를 함께 표시하기
+//호출된함수위치, 줄번호 문자열로 가져옴
+#define APPINFO (FString(__FUNCTION__) + TEXT("(")+FString::FromInt(__LINE__)+TEXT(")"))
+
+//호출된 정보만 찍는 매크로 함수
+#define  PRINT_INFO() UE_LOG(LogTemp,Warning,TEXT("%s"), *APPINFO)
+
+- inline / 치환
+컴파일러가 효율적으로 필요한 경우 inline 을 배치한다
+일반 함수로 해도 컴파일러가 알아서 인라인으로 바꿔줌
+
+//주어진 포맷으로 메시지를 찍는 매크로 함수
+#define PRINT_LOG(fmt, ...) UE_LOG(LogTemp,Warning,TEXT("%s %s"), *APPINFO, *FString::Printf(fmt, ##__VA_ARGS__))
+##__VA_ARGS__ : 가변인수 매크로
+
+- Category 설정하기
+log 카테고리를 지정하여 우리가 사용한 log만 보는 기능
+header : DECLARE_LOG_CATEGORY_EXTERN(TPSMsg, Log, All)
+cpp : DEFINE_LOG_CATEGORY(TPSMsg);
+
