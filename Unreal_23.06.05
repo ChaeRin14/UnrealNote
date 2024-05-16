@@ -1,0 +1,31 @@
+- Pawn의 개념
+player -> Pawn
+Actor 즉 Pawn도 Actor라는 것
+
+- Pawn과 PlayerController의 관계
+체스란 actor의 pawn을 잡고 움직이는 것을 playerController / AIController 라하고 이것을 이용해서 possessed (빙의)를 한다. 
+Pawn만이 플레이어가 유일하게 소유할수 있는 액터이다.
+playerController는 나를 대변하는 것이다.
+multiplayer 상황에서는 playerController가 유저 수만큼 존재한다
+
+- character
+character는 Pawn 중에 움직임에 더 특화됨
+그래서 Mesh component가 따라다님
+
+상속관계 |  Charactor -> Pawn -> Actor 
+
+- static mesh : 변형이 불가능
+- skeletal mesh : 변형 가능, 애니메이션 관련
+해당 Actor의 뼈대(bone)을 움직여서 애니메이션을 만들 수 있음.
+
+- 3d object를 만들기 위해 필요한 2가지
+mesh data(뼈대 data, 그 위에 재질(피부)을 바름)
+Meterial(texture, shader)
+
+- Class 개념
+( 객체 인스턴스 )Class = 속성 + 기능
+속성 ( 멤버 변수 )
+기능 ( 멤버 함수 )
+C++언어에서 class가 열리는 기능을 - { , 닫히는 기능 - }
+복잡한 AI controller를 써야 할 때는 Pawn을 상속받는다
+
