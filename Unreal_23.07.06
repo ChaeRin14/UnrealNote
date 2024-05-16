@@ -1,0 +1,23 @@
+- IK/ FK
+5에서는 IK만을 이용한 시스템도 존재한다 - control rig
+IK ( Inverse Kinematic) 종속성, 손끝에서 어깨로
+FK (Forward Kinematic)    어깨에서 손끝으로 (세부사항까지 개별적으로 수정)
+
+파쿠르에서 특정 지점을 잡으려고 할 때, 그리고 다른 파트가 그에 맞게 움직일 때 IK를 사용한다
+
+- 상태머신(State Machine)
+높낮이에 따른 애니메이션 연출의 한계가 존재 
+이를 상태 머신을 통해 자연스럽게 연출해 줄수 있다
+
+1. Add conduit
+배관 | 배관을 따라 어디로 갈까   조건에 따라 노드를 나눌수 있다.
+2. 조건 발생 transition 버튼
+
+- 벡터의 내적
+두 벡터의 방향이 순방향인지 역방향인지 판단가능
+양수 : 순방향
+음수 : 역방향
+
+- dot 벡터의 내적을 이용
+Get actor forward vector로 앞뒤 방향을 알수 있고 
+Get actor Right vector 이용하면 좌우 방향을 알수 있다.
