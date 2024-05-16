@@ -40,6 +40,11 @@ VARIABLES > Components > 변수 명 > 타입
 - GetActorLocation
 현재 액터의 위치
 
+- collapse to function
+여러가지 노드를 하나의 기능으로 합친다
+
+- make Rot from ZX
+z: 바라보는 방향 / x: 고정축
 
 
 
