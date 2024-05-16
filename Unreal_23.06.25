@@ -1,0 +1,24 @@
+- Ray
+LineTrace
+라인으로 트레이스 하거나  볼륨으로 트레이스 하거나 둘 중 하나
+시선은 시작점과 끝점이 필요
+검출한 요소들이 필요
+HitResult
+
+- UI
+언리얼에서는 위젯
+CreateWidget 노드 사용
+
+- Field of View
+카메라 화면각
+Clip - near / far
+
+- 공간치환법
+3D 공간과 2D공간 일치 시키는 법 — [viewport] — 0~1까지의 값으로 치환한다
+
+- 두 가지 UI 공간
+월드 UI - headup display- widget component로 해결
+보통 UI - 2D 공간에 위치
+
+- Add to Viewport
+화면에 띄우기
