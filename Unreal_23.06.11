@@ -1,0 +1,35 @@
+- SetLifeSpan 함수
+Destroy 함수를 자동으로 호출하는 함수 
+사용 -> SetLifeSpan(초);
+
+Actor 내부에 구현된 모습. 자체 시간을 카운트하는 것을 볼 수 있다
+만약 작동하지 않는다면 블루프린트에서 수정한 적이 있는 것
+이것을 reset버튼을 눌러 default 값으로 적용해준다.
+
+또한 Destrtoy();로 대체 가능
+
+- DestroyZone
+화면밖으로 나간 개체 삭제하기
+
+- Sweep
+오브젝트를 block 시키는 기능
+root comp 만 가능
+hit 이벤트 발생시킴
+Block과 sweep true 모두 해줘야 block이 동작한다
+
+- Object pool
+uparticlesystem > uniagara
+
+Object pool - 총알 공장에 총알을 요청하는 과정이 성능의 중요한 요인이 된다. (connection pool) 총알을 미리 만들어 놓는 과정
+
+SpwanActor() - 총알 공장에서 총알을 생성해서 우리에게 가져다주는 기능.
+
+- Garbage Collection
+GC = Garbage Collection 의 기능
+기능설명 | 9개의 공간이 있고 6개의 공간을 입력해야 될시 기존의 쓰레기 데이터를 없애주고 재정렬 해주는 기능
+          memory fragmentation (메모리 단편화/ 파편화)
+문제 | SpawnActor가 연속적으로 발생하면 GC가 계속 간섭하게되고 이는 렉발생의 원인이된다. 이를 해결해주는것이 Object pool 기능
+해결법 | 미리 생성해서 메모리 공간에 잡아 놓음 / 씬이 전환될 때 모든 오브젝트를 한번에 로드하는 것
+참고 | 위의 내용들은 실무에서 최적화 과정에 관한 파이프 라인이며 경험을 통해 데이터를 쌓아야한다.
+
+
